@@ -23,11 +23,9 @@
     ```bash
     $ ./backend/target/release/selfstat-backend
     ```
-5. Build frontend
+5. Open selfhost and pass backend url (rest)
     ```
-    $ python3 .
+    $ open https://qweme32.github.io/selfstat
     ```
-6. Open index.html in build dir
-7. Enjoy
 
 > With <3 by @qweme32
