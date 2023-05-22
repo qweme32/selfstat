@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfstat - %url%</title>
+</head>
+<body>
+    <div class="chart"></div>
+    <div class="elements">
+        <div class="element">
+            <div>
+                <span class="badge">SERVER</span> 
+                <span id="url">http://127.0.0.1:1337/rps</span>
+            </div>
+            
+        </div>
+        <div class="element">
+            <div>
+                <span class="badge">STATUS</span>
+                <span id="status">Alive</span>
+            </div>
+        </div>
+        <div class="element">
+            <div>
+                <span class="badge">RPS</span>
+                <span id="rps">123</span>
+            </div>
+        </div>
+        <div class="element">
+            <div>
+                <span class="badge">MAX</span>
+                <span id="max">12337</span>
+            </div>
+        </div>
+        <div class="element">
+            <div>
+                <span class="badge">VERSION</span>
+                <span id="version">v1.0.0</span>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="selfstat.js"></script>
+    <script>
+        async function bootstrap() {
+            let selfstat = new Selfstat({
+                rest: "%url%", 
+                render: ".chart", 
+                urlElement: "#url", 
+                statusElement: "#status", 
+                maxElement: "#max", 
+                rpsElement: "#rps"
+            });
+
+            await selfstat.start();
+        }
+
+        bootstrap();
+    </script>
+</body>
+</html>

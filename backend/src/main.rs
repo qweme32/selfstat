@@ -2,6 +2,7 @@ use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::{Duration};
 use actix_web::{rt, web, App, HttpResponse, HttpServer};
+use actix_cors::Cors;
 
 struct AppState {
     request_count: Arc<Mutex<u64>>,
@@ -44,6 +45,9 @@ fn main() {
                     request_count: Arc::clone(&request_count),
                     request_count_sync: Arc::clone(&request_count_sync)
                 })
+                .wrap(
+                    Cors::permissive()
+                )
                 .route("/", web::get().to(index))
                 .route("/rps", web::get().to(rps))
         })

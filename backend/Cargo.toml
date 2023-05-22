@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 actix-web = "3.3.2"
+actix-cors = "0.5"

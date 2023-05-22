@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background: #111;
+    font-family: 'Manrope';
+}
+
+.chart {
+    margin: 32px;
+}
+
+.elements {
+    margin-bottom: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    grid-gap: 12px;
+    
+    
+}
+
+.element {
+    color: #fff;
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 8px;
+    white-space:normal;
+    padding: 16px 12px;
+    background: #222;
+    border-radius: 8px;
+    margin: 6px;
+}
+
+.element .badge{
+    color: #f54251;
+    border: 1px solid #f54251;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 6px;
+    margin-right: 6px;
+}

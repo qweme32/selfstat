@@ -11,3 +11,9 @@ Cargo.lock
 .idea/
 *.swp
 *.swo
+
+# Python
+__pycache__
+
+# Selfstat
+build
